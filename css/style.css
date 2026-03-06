@@ -1,0 +1,28 @@
+/* The * means every element on the page to clear out default margins
+and padding browsers add on their own.
+ */
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* Change background color */
+  background-color: #1a1a2e;
+  color: white;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+}
+
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
