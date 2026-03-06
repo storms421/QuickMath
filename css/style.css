@@ -24,53 +24,20 @@ body {
   display: none !important;
 }
 
-/* a div with display: flex becomes a "flex container" which allows it
-to rearrange its children with the two most important properties
-(justify-content and align-items).
- */
-
 /* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
-
-/* Centers all content vertically and horizontally on screen for main menu */
-#main-menu {
-  display: flex;
-  flex-direction: column; /* setting to column makes main axis become vertical */
-  align-items: center; /* centers children horizontally */
-  justify-content: center; /* centers children vertically */
-  height: 100vh; /* makes div fill full screen height */
-  gap: 16px; /* adds space between title and each button automatically */
-}
 
 /* Designing the game title in main menu */
 #main-menu h1 {
   font-size: 5em; /* em is relative to default font size, so 5 times normal size and bold for title */
   letter-spacing: 4px; /* spreads letters out a tad */
-  color: #e94560 /* set header color to reddish pink */
+  color: #e94560; /* set header color to reddish pink */
 }
 
 /* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
 
-/* Leaderboard screen centered */
-#leaderboard {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  gap: 16px;
-}
-
-/* Displaying leaderboard title */
-#leaderboard h2 {
-  font-size: 2em;
-  letter-spacing: 3px;
-  color: #e94560;
-  margin-bottom: 8px; /* Pushes everything below the leaderboard title by 8px */
-}
-
 /* Leaderboard list items (targets whole list as one unit) */
 #leaderboard-screen-list {
-  list-style: none; /* removes default numbered bullets (using a different approach)
+  list-style: none; /* removes default numbered bullets (using a different approach) */
   width: 300px; /* gives list a consistent width */
 }
 
@@ -79,6 +46,7 @@ to rearrange its children with the two most important properties
   padding: 10px 16px; /* spacing */
   border-bottom: 1px solid #333; /* subtle dividing line between each entry */
   font-size: 1.1em; /* makes text slightly bigger than defaults */
+  text-align: center;
 }
 
 /* Overriding button information */
@@ -90,27 +58,46 @@ to rearrange its children with the two most important properties
 
 /* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
 
-#achievements {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  gap: 16px;
+/* Achievement card design */
+.achievement-item {
+  background-color: #16213e;
+  padding: 12px 24px;
+  border-left: 4px solid #e94560; /* left accent bar design */
+  width: 280px; /* card width */
+  font-size: 1.1em;
 }
 
-#achievements h2 {
-  font-size: 2em;
-  letter-spacing: 3px;
-  color: #e94560;
-  margin-bottom: 8px;
-}
-
+/* Different colors for each achievement */
+.achievement-bronze { border-left-color: #cd7f32}
+.achievement-flame { border-left-color: #ff4444}
 
 
 /* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
 
-/* Designing buttons */
+/* a div with display: flex becomes a "flex container" which allows it
+to rearrange its children with the two most important properties
+(justify-content and align-items).
+ */
+
+/* Default screen layout */
+.screen {
+  display: flex;
+  flex-direction: column; /* setting to column makes main axis become vertical */
+  align-items: center; /* centers children horizontally */
+  justify-content: center; /* centers children vertically */
+  height: 100vh; /* makes div fill full screen height */
+  gap: 16px; /* adds space between title and each button automatically */
+}
+
+/* Default head design/layout */
+.header {
+  font-size: 2em; /* em is relative to default font size, so 5 times normal size and bold for title */
+  letter-spacing: 3px; /* spreads letters out a tad */
+  color: #e94560; /* set header color to reddish pink */
+  margin-bottom: 8px; /* Pushes everything below the leaderboard title by 8px */
+}
+
+/* Default button design information */
 .btn {
   background-color: #e94560;
   color: white;

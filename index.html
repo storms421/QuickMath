@@ -11,7 +11,7 @@
 <body>
 
   <!-- Main Menu -->
-  <div id="main-menu" class="hidden">
+  <div id="main-menu" class="screen hidden">
     <h1>Quick Math</h1>
 
     <button id="start-game" class="btn">Start Game</button>
@@ -20,7 +20,7 @@
 
   </div>
 
-  <div id="game" class="hidden">
+  <div id="game" class="screen hidden">
 
     <p id="timer">60</p>
     <p id="score">0 Correct</p>
@@ -38,9 +38,9 @@
 
   </div>
 
-  <div id="results" class="hidden">
+  <div id="results" class="screen hidden">
 
-    <h2>Results</h2>
+    <h2 class="header">Results</h2>
 
     <p id="player-score">0</p>
 
@@ -63,9 +63,9 @@
 
   </div>
 
-  <div id="leaderboard" class="hidden">
+  <div id="leaderboard" class="screen hidden">
 
-    <h2>Leaderboard</h2>
+    <h2 class="header">Leaderboard</h2>
 
     <ol id="leaderboard-screen-list">
       <li>MSN - 40</li>
@@ -86,11 +86,13 @@
 
   </div>
 
-  <div id="achievements">
+  <div id="achievements" class="screen hidden">
 
-    <h2>Achievements</h2>
+    <h2 class="header">Achievements</h2>
 
     <div id="achievements-list">
+      <p class="achievement-item achievement-bronze"> Bronze</p>
+      <p class="achievement-item achievement-flame"> Red Flame</p>
 
     </div>
 
