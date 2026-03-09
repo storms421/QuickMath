@@ -24,7 +24,7 @@ body {
   display: none !important;
 }
 
-/* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+/************************** Main Menu Screen ****************************/
 
 /* Designing the game title in main menu */
 #main-menu h1 {
@@ -33,7 +33,7 @@ body {
   color: #e94560; /* set header color to reddish pink */
 }
 
-/* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+/************************** Game Screen ****************************/
 
 
 /* Becomes an anchor for game screen */
@@ -55,6 +55,7 @@ body {
   right: 15px;
 }
 
+/* Design for problems being shown */
 #problem {
   background-color: #16213e;
   padding: 24px 24px;
@@ -63,6 +64,7 @@ body {
   text-align: center;
 }
 
+/* Design for answer buttons */
 #answer-buttons {
   display: flex;
   flex-wrap: wrap; /* allows buttons to wrap (in this case two in a row) */
@@ -71,22 +73,28 @@ body {
   gap: 16px;
 }
 
-
-/* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
-
-/* Leaderboard list items (targets whole list as one unit) */
-#leaderboard-screen-list {
-  list-style: none; /* removes default numbered bullets (using a different approach) */
-  width: 300px; /* gives list a consistent width */
+/* Override overlay color for penalty */
+#penalty {
+  background-color: rgba(120, 30, 50, 0.70);
 }
 
-/* Leaderboard list items (targets each individual row inside list) */
-#leaderboard-screen-list li {
-  padding: 10px 16px; /* spacing */
-  border-bottom: 1px solid #333; /* subtle dividing line between each entry */
-  font-size: 1.1em; /* makes text slightly bigger than defaults */
-  text-align: center;
+/* Design for the countdown when a penalty is activated */
+#countdown {
+  color: black;
+  font-size: 15em;
+  text-shadow: 0 -2px 0 white, 0 2px 0 white, -2px 0 0 white, 2px 0 0 white; /* Outline effect */
 }
+
+/************************** Result Screen ****************************/
+
+/* Player's score final result display (gold/silver/bronze possible colors in .score) */
+#player-score {
+  color: white;
+  font-size: 5em;
+  text-shadow: 0 -2px 0 black, 0 2px 0 black, -2px 0 0 black, 2px 0 0 black;
+}
+
+/************************** Leaderboard Screen ****************************/
 
 /* Overriding button information */
 #back-to-main-menu-leaderboard {
@@ -95,7 +103,7 @@ body {
   font-size: 0.9em;
 }
 
-/* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+/************************** Achievement Screen ****************************/
 
 /* Achievement card design */
 .achievement-item {
@@ -108,10 +116,10 @@ body {
 
 /* Different colors for each achievement */
 .achievement-bronze { border-left-color: #cd7f32}
-.achievement-flame { border-left-color: #ff4444}
+.achievement-red { border-left-color: #ff4444}
 
 
-/* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+/************************** Shared Classes (Used across all "screens") ****************************/
 
 /* a div with display: flex becomes a "flex container" which allows it
 to rearrange its children with the two most important properties
@@ -136,6 +144,20 @@ to rearrange its children with the two most important properties
   margin-bottom: 8px; /* Pushes everything below the leaderboard title by 8px */
 }
 
+/* Leaderboard list items (targets whole list as one unit) */
+.leaderboard-list {
+  list-style: none; /* removes default numbered bullets (using a different approach) */
+  width: 300px; /* gives list a consistent width */
+}
+
+/* Leaderboard list items (targets each individual row inside list) */
+.leaderboard-list li {
+  padding: 10px 16px; /* spacing */
+  border-bottom: 1px solid #333; /* subtle dividing line between each entry */
+  font-size: 1.5em; /* makes text slightly bigger than defaults */
+  text-align: center;
+}
+
 /* Default button design information */
 .btn {
   background-color: #e94560;
@@ -152,4 +174,28 @@ to rearrange its children with the two most important properties
 .btn:hover {
   background-color: #7f2034;
   cursor: pointer;
+}
+
+/* Blur to make penalty and achievements the main focus */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(120, 120, 120, 0.70);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.score-gold{
+  color: gold;
+}
+.score-silver{
+  color: silver;
+}
+.score-bronze{
+  color: saddlebrown;
 }

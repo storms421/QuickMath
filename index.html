@@ -1,8 +1,14 @@
+<!-- Declaration to browser that this files uses modern HTML5 -->
 <!doctype html>
+
 <html class="no-js" lang="">
 
 <head>
+  <!-- Tells browser what character encoding the file uses. UTF-8 supports virtually
+  every character and symbol -->
   <meta charset="utf-8">
+  <!-- For mobile browsers so that the page can tell the mobile browser to
+  match the display width to the device width and start at a normal zoom -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Quick Math</title>
   <link rel="stylesheet" href="css/style.css">
@@ -10,7 +16,7 @@
 
 <body>
 
-  <!-- Main Menu -->
+<!------------------------ Main Menu ----------------------------------------------->
   <div id="main-menu" class="screen hidden">
     <h1>Quick Math</h1>
 
@@ -20,7 +26,8 @@
 
   </div>
 
-  <div id="game" class="screen">
+  <!------------------------ Game ----------------------------------------------->
+  <div id="game" class="screen hidden">
 
     <p id="timer">60</p>
     <p id="score">0 Correct</p>
@@ -34,53 +41,42 @@
       <button id="option4" class="btn">Option 4</button>
     </div>
 
-    <div id="penalty">
+    <div id="penalty" class="overlay hidden">
+
+      <h1 id="countdown">3</h1>
 
     </div>
 
   </div>
 
+  <!------------------------ Results ----------------------------------------------->
   <div id="results" class="screen hidden">
 
     <h2 class="header">Results</h2>
 
     <p id="player-score">0</p>
 
-    <ol id="results-leaderboard-list">
+    <ol id="results-leaderboard-list" class="leaderboard-list">
 
     </ol>
 
     <button id="play-again" class="btn">Play Again</button>
     <button id="back-to-menu-results" class="btn">Main Menu</button>
 
-    <div id="leaderboard-entry">
-
-
-    </div>
-
-    <div id="achievement-earned">
-
+    <div id="achievement-earned" class="overlay hidden">
+      <p class="achievement-received"></p>
 
     </div>
 
   </div>
 
+<!------------------------ Leaderboard ----------------------------------------------->
   <div id="leaderboard" class="screen hidden">
 
     <h2 class="header">Leaderboard</h2>
 
-    <ol id="leaderboard-screen-list">
-      <li>MSN - 40</li>
-      <li>NTS - 38</li>
-      <li>AMN - 36</li>
-      <li>AMB - 30</li>
-      <li>SJN - 28</li>
-      <li>JJK - 26</li>
-      <li>AAA - 24</li>
-      <li>BBB - 22</li>
-      <li>BBB - 22</li>
-      <li>CCC - 20</li>
-      <li>DDD - 15</li>
+    <ol id="leaderboard-screen-list" class="leaderboard-list">
+
     </ol>
 
     <button id="back-to-main-menu-leaderboard" class="btn">Back to Main Menu</button>
@@ -88,13 +84,12 @@
 
   </div>
 
+  <!------------------------ Achievements ----------------------------------------------->
   <div id="achievements" class="screen hidden">
 
     <h2 class="header">Achievements</h2>
 
     <div id="achievements-list">
-      <p class="achievement-item achievement-bronze"> Bronze</p>
-      <p class="achievement-item achievement-flame"> Red Flame</p>
 
     </div>
 
@@ -107,7 +102,8 @@
   </div>
 
 
-
+  <!-- Reads the file and is placed at the bottom so that all HTML is built
+  before JS runs -->
   <script src="js/script.js"></script>
 
 </body>
