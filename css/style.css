@@ -116,7 +116,13 @@ body {
 
 /* Different colors for each achievement */
 .achievement-bronze { border-left-color: #cd7f32}
+.achievement-silver { border-left-color: #888888}
+.achievement-gold { border-left-color: #ffd700}
 .achievement-red { border-left-color: #ff4444}
+.achievement-blue { border-left-color: #0000ff}
+.achievement-purple { border-left-color: #663399}
+.achievement-completelyWrong { border-left-color: #8b4515}
+.achievement-allUnlocked { border-left-color: #000000}
 
 
 /************************** Shared Classes (Used across all "screens") ****************************/
