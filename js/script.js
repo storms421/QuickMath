@@ -107,33 +107,6 @@ function renderLeaderboard(){
 
 }
 
-// Resets all state variables and game session
-function startGame(){}
-
-// Create random math problem to display
-function generateProblem(){}
-
-// Create random math answers to display
-function generateRandomAnswers(){}
-
-// Displays problems on screen
-function renderProblem(){}
-
-// Compare clicked answer with correct answer
-function checkAnswer(){}
-
-// Start countdown
-function startTimer(){}
-
-// Stop when timer hits 0
-function stopTimer(){}
-
-// Events to take place after timer hits 0
-function endGame(){}
-
-// Handles lockout and countdown
-function penalty(){}
-
 
 
 
@@ -234,7 +207,6 @@ function checkAchievements(position){
   renderAchievements();
 
 }
-
 
 
 
