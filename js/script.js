@@ -38,7 +38,7 @@ let timerInterval = null;  // Holds setInterval ID so it can be cancelled later
 let currentStreak = 0;  // Counts consecutive correct answers
 let currentAnswer = null;  // Holds current correct answer
 let liveLeaderboard = [];  // Working leaderboard that is loaded from localStorage
-let wrongAnswers = 0;  // Checks for platinum achievement (1 wrong answer and it cannot be achieved)
+let wrongAnswers = 0;  // Checks for platinum achievement (1 wrong answer, and it cannot be achieved)
 let earnedAchievements = {};  // Current achievement unlock state
 let currentProblem = "";  // Math expression shown on screen
 // Snapshot of achievements taken at start of game to detect which ones were newly earned each round
@@ -93,8 +93,7 @@ function showScreen(targetScreen){
 
 // Return a random whole number between min/max
 function randomInt(min, max){
-  const randomNum = Math.floor(Math.random() * (max - min + 1)) + min;
-  return randomNum;
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 // Resets all state variables and game session
@@ -474,6 +473,23 @@ function checkStreakAchievements(){
   }
 }
 
+// Checks for if achievements were earned and displays message
+function isAchievementEarned(){
+
+  // Find which achievements were locked before game round starts from snapshot
+  const newlyEarned = [];
+  for(const key in earnedAchievements){
+    if(earnedAchievements[key] === true && previousAchievements[key] === false){
+      newlyEarned.push(key);
+    }
+  }
+
+  // Display message of achievement earned if a new achievement was earned
+  if(newlyEarned.length > 0){
+    achievementMessage.textContent = "You earned " + newlyEarned.length + " achievement(s)";
+  }
+}
+
 // Checks to see if any achievements were earned
 // Position is used to check if player placed on leaderboard
 function checkAchievements(position){
@@ -489,18 +505,7 @@ function checkAchievements(position){
     earnedAchievements.allUnlockedAchievements = true;
   }
 
-  // Find which achievements were locked before game round starts from snapshot
-  const newlyEarned = [];
-  for(const key in earnedAchievements){
-    if(earnedAchievements[key] === true && previousAchievements[key] === false){
-      newlyEarned.push(key);
-    }
-  }
-
-  // Display message of achievement earned if a new achievement was earned
-  if(newlyEarned.length > 0){
-    achievementMessage.textContent = "You earned " + newlyEarned.length + " achievement(s)";
-  }
+  isAchievementEarned();
 
   // Save updated information and then render the information
   saveAchievements();

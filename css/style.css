@@ -127,7 +127,7 @@ body {
 .achievement-allUnlockedAchievements { border-left-color: #000000}
 
 
-/************************** Shared Classes (Used across all "screens") ****************************/
+/************************** Shared Classes (Used across all "screens") *****************************/
 
 /* a div with display: flex becomes a "flex container" which allows it
 to rearrange its children with the two most important properties
