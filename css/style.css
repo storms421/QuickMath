@@ -36,7 +36,7 @@ body {
 /************************** Game Screen ****************************/
 
 
-/* Becomes an anchor for game screen */
+/* Makes the positioning parent so timer and score can be placed inside */
 #game {
   position: relative;
 }
@@ -118,11 +118,13 @@ body {
 .achievement-bronze { border-left-color: #cd7f32}
 .achievement-silver { border-left-color: #888888}
 .achievement-gold { border-left-color: #ffd700}
-.achievement-red { border-left-color: #ff4444}
-.achievement-blue { border-left-color: #0000ff}
-.achievement-purple { border-left-color: #663399}
+.achievement-platinum { border-left-color: #333333}
+.achievement-diamond { border-left-color: #008080}
+.achievement-redFlame { border-left-color: #ff4444}
+.achievement-blueFlame { border-left-color: #0000ff}
+.achievement-purpleFlame { border-left-color: #663399}
 .achievement-completelyWrong { border-left-color: #8b4515}
-.achievement-allUnlocked { border-left-color: #000000}
+.achievement-allUnlockedAchievements { border-left-color: #000000}
 
 
 /************************** Shared Classes (Used across all "screens") ****************************/
@@ -144,15 +146,15 @@ to rearrange its children with the two most important properties
 
 /* Default head design/layout */
 .header {
-  font-size: 2em; /* em is relative to default font size, so 5 times normal size and bold for title */
+  font-size: 2em; /* em is relative to default font size, so 2 times normal size and bold for title */
   letter-spacing: 3px; /* spreads letters out a tad */
   color: #e94560; /* set header color to reddish pink */
   margin-bottom: 8px; /* Pushes everything below the leaderboard title by 8px */
 }
 
 /* Leaderboard list items (targets whole list as one unit) */
-.leaderboard-list {
-  list-style: none; /* removes default numbered bullets (using a different approach) */
+.leaderboard-list li::marker {
+  content: counter(list-item) " "; /* displays number, but with a space instead of '.'
   width: 300px; /* gives list a consistent width */
 }
 
@@ -179,7 +181,6 @@ to rearrange its children with the two most important properties
 /* Darkens buttons slightly on hover */
 .btn:hover {
   background-color: #7f2034;
-  cursor: pointer;
 }
 
 /* Blur to make penalty and achievements the main focus */
@@ -190,18 +191,8 @@ to rearrange its children with the two most important properties
     z-index: 100;
     width: 100%;
     height: 100%;
-    background-color: rgba(120, 120, 120, 0.70);
+    background-color: rgba(120, 120, 120, 0.90);
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.score-gold{
-  color: gold;
-}
-.score-silver{
-  color: silver;
-}
-.score-bronze{
-  color: saddlebrown;
 }
