@@ -6,6 +6,7 @@
 
 ## Problem Types
   Players will have 4 different types of problems they can face:
+  
     1. Addition: Numbers 1-15
     2. Subtraction: Numbers 1-15 (Possibility of Negative Answers)
     3. Multiplication: Numbers 1-12
