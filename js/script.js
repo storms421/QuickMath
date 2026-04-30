@@ -1,7 +1,7 @@
 // Game Constants
 const GAME_DURATION = 60;  // Total seconds per game round
 const PENALTY_DURATION = 3;  // Penalty duration for wrong answer clicked
-const TOTAL_ACHIEVEMENTS = 8;  // Used to check if every achievement has been unlocked
+const TOTAL_ACHIEVEMENTS = 10;  // Used to check if every achievement has been unlocked
 
 // Default leaderboard that is loaded first time game runs
 const LEADERBOARD = [
@@ -24,6 +24,7 @@ const ACHIEVEMENTS = {
   gold: false,
   platinum: false,
   diamond: false,
+  champion: false,
   redFlame: false,
   blueFlame: false,
   purpleFlame: false,
@@ -444,8 +445,13 @@ function checkPerformanceAchievements(){
   }
 
   // Unlocks Diamond - Score 45+
-  if(score >= 45 && earnedAchievements.platinum === false){
+  if(score >= 45 && earnedAchievements.diamond === false){
     earnedAchievements.diamond = true;
+  }
+
+  // Unlocks Champion - Score 50+
+  if(score >= 50 && earnedAchievements.champion === false){
+    earnedAchievements.champion = true;
   }
 
   // Unlocks Completely Wrong - 0 correct answers

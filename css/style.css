@@ -107,6 +107,7 @@ body {
 
 /* Achievement card design */
 .achievement-item {
+  list-style: none; /* removes default numbered bullets (using a different approach) */
   background-color: #16213e;
   padding: 12px 24px;
   border-left: 4px solid #e94560; /* left accent bar design */
@@ -120,6 +121,7 @@ body {
 .achievement-gold { border-left-color: #ffd700}
 .achievement-platinum { border-left-color: #333333}
 .achievement-diamond { border-left-color: #008080}
+.achievement-champion {border-left-color: #fffafa}
 .achievement-redFlame { border-left-color: #ff4444}
 .achievement-blueFlame { border-left-color: #0000ff}
 .achievement-purpleFlame { border-left-color: #663399}
