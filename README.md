@@ -42,3 +42,11 @@
   - Change up colors
   - Adding icons for achievements
   - A harder mode with higher numbers
+
+## Conversations with Claude
+<img width="2559" height="1351" alt="1" src="https://github.com/user-attachments/assets/317ceac1-6285-4416-8e17-ececd0357b18" />
+<img width="2559" height="1356" alt="15" src="https://github.com/user-attachments/assets/b86a686b-ed06-43f9-966f-d1a8685a01d6" />
+<img width="2559" height="1352" alt="18" src="https://github.com/user-attachments/assets/12777d43-3943-4484-9470-3d9011b8a2f5" />
+<img width="2559" height="1352" alt="22" src="https://github.com/user-attachments/assets/af2c41cf-63da-4889-8543-362e1afffc73" />
+
+
